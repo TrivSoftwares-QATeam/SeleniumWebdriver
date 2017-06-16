@@ -11,7 +11,7 @@ public class GetGoogleTitle
 {
 	
 	@Test
-	public void GetGoogleTitle() 
+	public GetGoogleTitle() 
 	{
 		System.setProperty("webdriver.chrome.driver", "D:\\_________SELENIUM_WEBDRIVER\\chromedriver.exe");	
 	    WebDriver driver = new ChromeDriver();
