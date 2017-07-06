@@ -14,17 +14,17 @@ WebDriver driver;
 	@BeforeMethod
 	public void setupApplication()
 	{
-		Reporter.log("======Browser Session Started======", true);	
+		//Reporter.log("======Browser Session Started======", true);	
 		
-		System.setProperty("webdriver.chrome.driver", "D:\\_________SELENIUM_WEBDRIVER\\chromedriver.exe");	
+		System.setProperty("webdriver.chrome.driver","D:\\SELENIUM_WEBDRIVER\\Softwares\\chromedriver.exe");
 		
-	    driver = new ChromeDriver();
+		driver = new ChromeDriver();
+		
+		driver.manage().window().maximize();
+		
+		driver.get("http://www.trivsoft.net");
 	    
-	    driver.manage().window().maximize();   
-	    
-	    driver.get("http://trivsoft.net/account/Login.aspx/");
-	    
-	    Reporter.log("======Application Started======", true);	    
+	   // Reporter.log("======Application Started======", true);	    
 	    	    
 	    //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
@@ -34,7 +34,7 @@ WebDriver driver;
 	{
 		driver.quit();
 		// Generate repots in HTML //true means shows in console window //
-		Reporter.log("======Browser Session End======", true);
+		//Reporter.log("======Browser Session End======", true);
 		
 	}
 
